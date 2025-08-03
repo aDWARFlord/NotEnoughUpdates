@@ -100,7 +100,7 @@ class WardrobeMouseButtons {
         val thatItemStack = container.getSlot(slotNum).getStack() ?: return
         if (thatItemStack.getDisplayName().isEmpty()) return
         if (slotNum < 36 || ((slotNum > 45) && (slotNum != 53))) return
-        Utils.sendLeftMouseClick(gui.inventorySlots.windowId, slotNum)
+        Utils.sendMiddleMouseClick(gui.inventorySlots.windowId, slotNum)
         lastClick = System.currentTimeMillis()
         event.isCanceled = true
     }
